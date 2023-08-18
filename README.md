@@ -8,7 +8,7 @@ As a user
 - I want to be able to play the game again if it's over
 - I want a max number of guesses
 
-- Bonus
+Bonus
     - I want to have a time limit to pick cards
     - I want to be able to have it be a 2 player game option
 
