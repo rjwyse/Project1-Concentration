@@ -14,7 +14,9 @@ As a user
 
 - Array of grid of cards
 
-![Alt text] (images/Wireframe.png)
+## Screenshots
+### Initial State
+![Alt text](images/Wireframe.png)
 
 
 ## Pseudocode
