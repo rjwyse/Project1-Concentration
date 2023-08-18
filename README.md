@@ -3,7 +3,7 @@ Concentration (Memory Game)
 As a user
 - I want to be able to have 1 player.
 - I want to be able to take turns
-- I want to have each player to be able to flip 2 cards
+- I want to have the player be able to flip 2 cards
 - I want to be able to keep cards flipped if correctly matched
 - I want to know who won or if it was a tie
 - I want to be able to play the game again if it's over
