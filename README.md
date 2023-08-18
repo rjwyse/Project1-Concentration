@@ -4,10 +4,13 @@ As a user
 - I want to be able to have 1 player.
 - I want to have the player be able to flip 2 cards
 - I want to be able to keep cards flipped if correctly matched
-- I want to know who won or if it was a tie
+- I want to know if you win or lose
 - I want to be able to play the game again if it's over
 - I want a max number of guesses
-- I want to have a time limit to pick cards
+
+- Bonus
+    - I want to have a time limit to pick cards
+    - I want to be able to have it be a 2 player game option
 
 ## Think about the  overall design (look & feel) of the app
 
