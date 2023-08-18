@@ -1,7 +1,7 @@
 Concentration (Memory Game)
 
 As a user
-- I want to be able to have 1 or 2 players.
+- I want to be able to have 1 player.
 - I want to be able to take turns
 - I want to have each player to be able to flip 2 cards
 - I want to be able to keep cards flipped if correctly matched
