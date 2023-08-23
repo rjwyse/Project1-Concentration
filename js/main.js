@@ -41,19 +41,31 @@ var firstGuess = null
 shuffle(cards)
 
 cardEls.forEach(function (el, index) {
+    console.log('this is el', el, 'this is index', index)
     el.addEventListener('click', function () {
         var clickedCard = cards[index]
         el.setAttribute('src', clickedCard.image)
+        console.log('this is el', el)
 
         if (firstGuess === null) {
             firstGuess = index
+            console.log('IF this is first guess', firstGuess)
         } else {
+            console.log('ELSE this is first guess', firstGuess)
             if (cards[firstGuess].value === cards[index].value) {
+                console.log('cards at first guess', cards[firstGuess].value, 'cards at index', cards[index].value)
                 firstGuess = null
             } else {
+                function myFunction() {
+                    console.log('timeout executed')
+                    console.log('the second else')
                 cardEls[firstGuess].setAttribute('src', 'css/card-library/backs/blue.svg')
                 cardEls[index].setAttribute('src', 'css/card-library/backs/blue.svg')
                 firstGuess = null
+                } setTimeout(myFunction, 3000)
+                
+                
+                
                 
 
 
@@ -61,12 +73,10 @@ cardEls.forEach(function (el, index) {
             }
         }
         
-
-        
-            
     })
-})
-  
+        
+})        
+
 
 
   /*----- state variables -----*/
