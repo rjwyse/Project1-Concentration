@@ -37,12 +37,16 @@
 var cardEls = document.querySelectorAll('.card')
 var firstGuess = null
 var numberOfGuesses = 0
+var matchedPairs = 0
 
 shuffle(cards)
 
 cardEls.forEach(function (el, index) {
     console.log('this is el', el, 'this is index', index)
-    el.addEventListener('click', function () {
+    el.addEventListener('click', function(){
+        if (numberOfGuesses >=20) {
+            return
+        }
         var clickedCard = cards[index]
         el.setAttribute('src', clickedCard.image)
         console.log('this is el', el)
@@ -54,6 +58,10 @@ cardEls.forEach(function (el, index) {
             console.log('ELSE this is first guess', firstGuess)
             if (cards[firstGuess].value === cards[index].value) {
                 console.log('cards at first guess', cards[firstGuess].value, 'cards at index', cards[index].value)
+                matchedPairs++
+                if (matchedPairs ===6) {
+                    document.getElementById('win-message').textContent = 'CONGRATULATIONS!!! YOU WON!!'
+                }
                 firstGuess = null
             } else {
                 function myFunction() {
@@ -62,11 +70,17 @@ cardEls.forEach(function (el, index) {
                 cardEls[firstGuess].setAttribute('src', 'css/card-library/backs/blue.svg')
                 cardEls[index].setAttribute('src', 'css/card-library/backs/blue.svg')
                 firstGuess = null
+                
                 } setTimeout(myFunction,1000)
-                
-                
-                           
 
+            }
+            numberOfGuesses++
+            document.getElementById('guess-count').textContent = numberOfGuesses
+            if (numberOfGuesses >=20) {
+                const messageElement = document.getElementById('game-message')
+                messageElement.textContent = 'Maximum number of Guesses Reached. GAME OVER'
+                return
+                console.log('Maximum number of guesses reached. Game over')
             }
         }
         
@@ -75,15 +89,22 @@ cardEls.forEach(function (el, index) {
 })
 
 const resetButton = document.getElementById('reset');
-resetButton.addEventListener('click', function() {
+resetButton.addEventListener('click', function () {
     cardEls.forEach(function (el, index) {
         el.setAttribute('src', 'css/card-library/backs/blue.svg')
 
         shuffle(cards)
 
         firstGuess = null
-    })
+
+        numberOfGuesses =0
+        document.getElementById('guess-count').textContent = numberOfGuesses
+
+        document.getElementById('game-message').textContent = ''
+        document.getElementById('win-message').textContent = ''
 })
+})
+
 
 
 
