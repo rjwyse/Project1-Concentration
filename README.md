@@ -1,4 +1,6 @@
-Concentration (Memory Game)
+Detroit Red WIngs Themed Concentration (Memory Game)
+
+[Concentration](https://rjwyse.github.io/Project1-Concentration/)
 
 As a user
 - I want to be able to have 1 player.

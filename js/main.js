@@ -44,7 +44,7 @@ shuffle(cards)
 cardEls.forEach(function (el, index) {
     console.log('this is el', el, 'this is index', index)
     el.addEventListener('click', function(){
-        if (numberOfGuesses >=20) {
+        if (numberOfGuesses >=15) {
             return
         }
         var clickedCard = cards[index]
@@ -67,16 +67,16 @@ cardEls.forEach(function (el, index) {
                 function myFunction() {
                     console.log('timeout executed')
                     console.log('the second else')
-                cardEls[firstGuess].setAttribute('src', 'css/card-library/backs/blue.svg')
-                cardEls[index].setAttribute('src', 'css/card-library/backs/blue.svg')
+                cardEls[firstGuess].setAttribute('src', 'css/card-library/redwings.png')
+                cardEls[index].setAttribute('src', 'css/card-library/redwings.png')
                 firstGuess = null
                 
-                } setTimeout(myFunction,1000)
+                } setTimeout(myFunction,500)
 
             }
             numberOfGuesses++
             document.getElementById('guess-count').textContent = numberOfGuesses
-            if (numberOfGuesses >=20) {
+            if (numberOfGuesses >=15) {
                 const messageElement = document.getElementById('game-message')
                 messageElement.textContent = 'Maximum number of Guesses Reached. GAME OVER'
                 return
@@ -91,7 +91,7 @@ cardEls.forEach(function (el, index) {
 const resetButton = document.getElementById('reset');
 resetButton.addEventListener('click', function () {
     cardEls.forEach(function (el, index) {
-        el.setAttribute('src', 'css/card-library/backs/blue.svg')
+        el.setAttribute('src', 'css/card-library/redwings.png')
 
         shuffle(cards)
 

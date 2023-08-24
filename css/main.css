@@ -1,6 +1,18 @@
 header {
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'poppins', sans-serif;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, p {
+    font-family: 'Shadows Into Light';
+    font-weight: bold;
+}
+
+p {
+   color: blue;
+   font-size: 40px; 
 }
 
 .cards {
@@ -27,5 +39,6 @@ header {
 }
 
 body{
-    background: rgba(8, 60, 8, 0.998);
+    background-image: url(https://cms.nhl.bamgrid.com/images/photos/297730524/1024x576/cut.jpg);
+    background-size: cover;
 }
