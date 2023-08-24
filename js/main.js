@@ -1,4 +1,3 @@
- /*----- constants -----*/
  function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
   
@@ -37,6 +36,7 @@
 
 var cardEls = document.querySelectorAll('.card')
 var firstGuess = null
+var numberOfGuesses = 0
 
 shuffle(cards)
 
@@ -62,30 +62,29 @@ cardEls.forEach(function (el, index) {
                 cardEls[firstGuess].setAttribute('src', 'css/card-library/backs/blue.svg')
                 cardEls[index].setAttribute('src', 'css/card-library/backs/blue.svg')
                 firstGuess = null
-                } setTimeout(myFunction, 3000)
+                } setTimeout(myFunction,1000)
                 
                 
-                
-                
+                           
 
-
-                
             }
         }
         
     })
         
-})        
+})
+
+const resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', function() {
+    cardEls.forEach(function (el, index) {
+        el.setAttribute('src', 'css/card-library/backs/blue.svg')
+
+        shuffle(cards)
+
+        firstGuess = null
+    })
+})
 
 
 
-  /*----- state variables -----*/
-
-
-  /*----- cached elements  -----*/
-
-
-  /*----- event listeners -----*/
-
-
-  /*----- functions -----*/
+ 
