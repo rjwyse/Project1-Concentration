@@ -1,3 +1,8 @@
+function clearConfetti() {
+    const confettiContainer = document.querySelector('.confetti-container')
+    confettiContainer.innerHTML = ''
+  }
+ 
  function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
   
@@ -59,9 +64,19 @@ cardEls.forEach(function (el, index) {
             if (cards[firstGuess].value === cards[index].value) {
                 console.log('cards at first guess', cards[firstGuess].value, 'cards at index', cards[index].value)
                 matchedPairs++
-                if (matchedPairs ===6) {
+                if (matchedPairs === 6) {
                     document.getElementById('win-message').textContent = 'CONGRATULATIONS!!! YOU WON!!'
+                    const confettiContainer = document.querySelector('.confetti-container');
+                    for (let i = 0; i < 100; i++) {
+                        const confetti = document.createElement('div')
+                        confetti.classList.add('confetti-red')
+                        confetti.style.left = `${Math.random() * 100}%`
+                        confetti.style.setProperty('--delay', i)
+                        confettiContainer.appendChild(confetti)
+                    }
+
                 }
+
                 firstGuess = null
             } else {
                 function myFunction() {
@@ -102,7 +117,9 @@ resetButton.addEventListener('click', function () {
 
         document.getElementById('game-message').textContent = ''
         document.getElementById('win-message').textContent = ''
-})
+
+        clearConfetti()
+    })
 })
 
 

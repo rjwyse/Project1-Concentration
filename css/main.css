@@ -42,3 +42,22 @@ body{
     background-image: url(https://cms.nhl.bamgrid.com/images/photos/297730524/1024x576/cut.jpg);
     background-size: cover;
 }
+
+@keyframes confetti-fall {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
+  }
+  
+  .confetti-red {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #f00;
+    animation: confetti-fall 3s linear infinite;
+    opacity: 1;
+    animation-delay: calc(var(--delay) * 0.1s);
+  }

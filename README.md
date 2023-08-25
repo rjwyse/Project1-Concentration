@@ -1,18 +1,34 @@
 Detroit Red WIngs Themed Concentration (Memory Game)
 
+## Screenshots
+
+Start of Game
+![Alt text](image.png)
+
+Winning!!
+![Alt text](image-3.png)
+
+Losing
+![Alt text](image-2.png)
+
+## Technologies used
+
+    - JavaScript
+    - HTML
+    - CSS
+
+## Getting Started
+
 [Concentration](https://rjwyse.github.io/Project1-Concentration/)
 
-As a user
-- I want to be able to have 1 player.
-- I want to have the player be able to flip 2 cards
-- I want to be able to keep cards flipped if correctly matched
-- I want to know if you win or lose
-- I want to be able to play the game again if it's over
-- I want a max number of guesses
+The game starts with all the cards face down a player turns over two cards. If the two cards have the same picture, then the cars stay flipped over, otherwise they turn the cards face down again. You win if you can get all the cards matched in under 15 tries.
 
-Bonus
+## Next Steps
+
+    - I want to have more cards
     - I want to have a time limit to pick cards
     - I want to be able to have it be a 2 player game option
+    - I would like to add sound
 
 ## Think about the  overall design (look & feel) of the app
 
@@ -21,6 +37,14 @@ Bonus
 ## Screenshots
 ### Initial State
 ![Alt text](images/Wireframe.png)
+
+As a user
+- I want to be able to have 1 player.
+- I want to have the player be able to flip 2 cards
+- I want to be able to keep cards flipped if correctly matched
+- I want to know if you win or lose
+- I want to be able to play the game again if it's over
+- I want a max number of guesses
 
 
 ## Pseudocode
